@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SimpleBlog</title>
+  <title><%= t('common.blog') %></title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -16,7 +16,15 @@
     <div class="container">
       <!--      <img src="app/frontend/images/ruby.svg" alt="" width="30" height="24">-->
       <a class="btn" href="<%= posts_path %>">Статьи</a>
-      <%= link_to 'Новая статья', new_post_path, class: 'btn btn-outline-primary' %>
+
+      <%= link_to t('common.new_article'), new_post_path, class: 'btn btn-outline-primary' %>
+
+      <li class="nav-item<%= " active" if I18n.locale == :ru %>">
+        <%= link_to "Рус", { locale: :ru}, class: "nav-link" %>
+      </li>
+      <li class="nav-item<%= " active" if I18n.locale == :en %>">
+        <%= link_to "En", { locale: :en}, class: "nav-link" %>
+      </li>
     </div>
   </nav>
 </div>
@@ -36,9 +44,9 @@
 </body>
 
 <footer>
-  <div class="container p-1 footer text-center fixed-bottom bg-light">
-      © <%= DateTime.now.year %> Copyright:
-      <a class="text-dark" href="https://github.com/rust-am">Rustam Shaidullov</a>
+  <div class="container p-2 footer text-center fixed-bottom bg-light">
+      © <%= DateTime.now.year %> <%= t('common.copyright') %>:
+      <a class="text-dark" href="https://github.com/rust-am"><%= t('common.rustam') %></a>
   </div>
 </footer>
 </html>

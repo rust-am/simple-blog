@@ -1,0 +1,24 @@
+ru:
+  posts:
+    index:
+      title: 'Cтатьи'
+    new:
+      title: 'Новая статья'
+    edit:
+      title: 'Редактирование статьи'
+    form:
+      submit:
+        '%{action} статью'
+
+  common:
+    rustam: 'Рустам Шайдуллов'
+    copyright: 'Авторские права'
+    errors: 'При заполнении формы возникла ошибка'
+    confirmation: 'Вы уверены?'
+    new_article: 'Новая статья'
+    blog: 'РельсоБлог'
+    back: 'Назад'
+    submit: 'Сохранить'
+    edit: 'Изменить'
+    delete: 'Удалить'
+

@@ -1,0 +1,9 @@
+en:
+  activerecord:
+    modesl:
+      post: 'Article'
+    attributes:
+      post:
+        title: 'Title'
+        summary: 'Summary'
+        body: 'Body'

@@ -14,7 +14,7 @@
 <div class="container">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-<!--      <img src="app/frontend/images/ruby.svg" alt="" width="30" height="24">-->
+      <!--      <img src="app/frontend/images/ruby.svg" alt="" width="30" height="24">-->
       <a class="btn" href="<%= posts_path %>">Статьи</a>
       <%= link_to 'Новая статья', new_post_path, class: 'btn btn-outline-primary' %>
     </div>
@@ -34,4 +34,11 @@
   <%= yield %>
 </div>
 </body>
+
+<footer>
+  <div class="container p-3 footer text-center fixed-bottom bg-light">
+      © <%= DateTime.now.year %> Copyright:
+      <a class="text-dark" href="https://github.com/rust-am">Rustam Shaidullov</a>
+  </div>
+</footer>
 </html>
